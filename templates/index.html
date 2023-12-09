@@ -420,25 +420,11 @@
   <!-- end shape -->
   <!-- end introduce -->
   <!-- conect us -->
-  <section class="container conect section" id="conect">
-    <div class="text-center">
-      <span class="d-inline-block rounded font-weight-bold activity-info my-2">تماس با ما</span>
-      <h1 class="activity-name"> تماس با ما</h1>
-      <p class="activity-text">از طریق فرم زیر یا چت واتساپ به شماره 09910549803 با ما ارتباط برقرار کنید.</p>
-    </div>
-    <div class="row my-5">
-      <div class="col-12 col-lg-6">
-        <img src="{% static "img/digital-2.png" %}" alt="img" class="img-fluid">
-      </div>
-      <!--form  -->
-    {% include "includes/massageform_tags.html" %}
-      <!-- end form -->
-    </div>
-  </section>
+    {% include "includes/conect_us.html" %}
   <!-- end conect us -->
   <!-- footer -->
   <footer class="footer">
-{% include "includes/footer_tags.html" %}
+    {% include "includes/footer_tags.html" %}
   </footer>
   <!-- end footer -->
   <!-- scroll to top  -->

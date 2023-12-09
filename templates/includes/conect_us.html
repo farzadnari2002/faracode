@@ -1,0 +1,30 @@
+{% load static %}
+<section class="container conect section" id="conect">
+  <div class="text-center">
+    <span class="d-inline-block rounded font-weight-bold activity-info my-2">تماس با ما</span>
+    <h1 class="activity-name"> تماس با ما</h1>
+    <p class="activity-text">از طریق فرم زیر یا چت واتساپ به شماره {{ contacts.number }} با ما ارتباط برقرار کنید.</p>
+  </div>
+  <div class="row my-5">
+    <div class="col-12 col-lg-6">
+      <img src="{% static "img/digital-2.png" %}" alt="img" class="img-fluid">
+    </div>
+    <!--form  -->
+    <div class="col-12 col-lg-6">
+      <form method="post">
+          {% csrf_token %}
+        <div class="form-group py-5 py-lg-0">
+            <label for="InputName"></label><input type="text" class="form-control my-2 form-box" name="name" placeholder="نام..." required id="InputName">
+          <input type="email" class="form-control my-2 form-box" name="email" required placeholder="ایمیل..." id="InputEmail"
+            aria-describedby="emailHelp">
+          <input type="text" class="form-control my-2 form-box" name="subject" placeholder="موضوع..." id="InputName">
+          <textarea name="body" id="message" class="my-2 w-100 form-box"  placeholder="پیام..."></textarea>
+          <div class="w-100 text-center">
+            <button class="btn message-btn text-center">ارسال پیام</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- end form -->
+  </div>
+</section>
