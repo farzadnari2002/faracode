@@ -1,0 +1,53 @@
+{% load static %}
+<section class="container projectss py-5 section  mt-4" id="projects">
+    <div class="text-center">
+      <span class="d-inline-block rounded font-weight-bold activity-info my-2">پروژه های خلاقانه</span>
+      <h1 class="activity-name"> آخرین کارهای ما</h1>
+      <p class="activity-text">موارد زیر نمونه کوچکی از فعالیت های ما در حوزه طراحی و ساخت اپلیکیشن و وبسایت است.</p>
+    </div>
+    <div class="animation-project d-none d-md-inline-block"></div>
+    <div class="row gallery">
+      <!-- single project -->
+        {% for project in projects %}
+      <div class="col-12 col-md-6 col-lg-4 py-4 d-flex align-items-center justify-content-center gallery-img">
+        <div class="img-pro">
+          <div class="addition">
+            <img src="{{ project.image.url }}" alt="" class="img-fluid pro-photo ">
+              <i class="fas fa-search pro-link"></i>
+          </div>
+          <div class="py-2 pro-name-activity w-100 text-center">
+            <a href="https://{{ project.link }}" class="pro-name font-weight-bold text-center">{{ project.title }}</a>
+            <p class="pro-activity">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+        {% endfor %}
+      <!-- end single project -->
+
+    </div>
+  </section>
+  <!-- gallery projects-->
+  <div class="preview-box">
+    <div class="detail">
+      <span>
+        <p class="current-img"></p>
+        /
+        <p class="total-img"></p>
+      </span>
+      <span class="iconClose">
+        <i class="fas fa-times"></i>
+      </span>
+    </div>
+    <div class="img-box">
+      <div class="slide prev">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <div class="slide next">
+        <i class="fas fa-angle-right"></i>
+      </div>
+      <img src="{% static "img/futfinal.jpg" %}" alt="">
+    </div>
+  </div>
+
+  <div class="shadow"></div>
+  <!-- end gallery projects -->

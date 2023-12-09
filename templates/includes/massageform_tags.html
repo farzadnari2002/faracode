@@ -1,0 +1,16 @@
+{% load static %}
+    <div class="col-12 col-lg-6">
+        <form method="post">
+            {% csrf_token %}
+          <div class="form-group py-5 py-lg-0">
+              <label for="InputName"></label><input type="text" class="form-control my-2 form-box" name="name" placeholder="نام..." required id="InputName">
+            <input type="email" class="form-control my-2 form-box" name="email" required placeholder="ایمیل..." id="InputEmail"
+              aria-describedby="emailHelp">
+            <input type="text" class="form-control my-2 form-box" name="subject" placeholder="موضوع..." id="InputName">
+            <textarea name="body" id="message" class="my-2 w-100 form-box"  placeholder="پیام..."></textarea>
+            <div class="w-100 text-center">
+              <button class="btn message-btn text-center">ارسال پیام</button>
+            </div>
+          </div>
+        </form>
+      </div>

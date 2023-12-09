@@ -1,0 +1,25 @@
+  {% load static %}
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-12 col-md-4 d-flex">
+          <a href="#" class="font-weight-bold footer-brand">
+            <img src="{% static "img/logo (2).png" %}" alt="logo">فراکد
+          </a>
+        </div>
+        <div class="col-12 col-md-4 my-4 my-md-0">
+          <p class="footer-text">مارا در شبکه های اجتماعی دنبال کنید</p>
+          <div class="footer-icons">
+            <a href="https://{{ contacts.instagram }}"><i class="fab fa-instagram footer-icon" title="Instagram"></i></a>
+            <a href="https://{{ contacts.telegram }}"><i class="fab fa-telegram footer-icon" title="Telegram"></i></a>
+            <a href="https://{{ contacts.whatsapp }}"><i class="fab fa-whatsapp footer-icon" title="Whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3 class="footer-title">تماس با ما</h3>
+          <p class="footer-text">{{ contacts.city }}</p>
+          <p class="footer-text">{{ contacts.post_address }}</p>
+          <p class="footer-text">{{ contacts.number }}</p>
+          <p class="footer-email">{{ contacts.email }}</p>
+        </div>
+      </div>
+    </div>
